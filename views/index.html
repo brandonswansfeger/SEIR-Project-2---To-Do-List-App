@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="/assets/css/style.css" </head> <body>
+    <!--Header-->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">To Do List</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/Header-->
+    <main id="site-main">
+        <div class="container">
+            <a href="/add-task" class="border-shadow">
+                <span class="text-gradient">Add Task</span>
+            </a>
+            <form method="POST" id="update_task">
+                <div class="box-nav-d-flex-justify-between">
+                    <div class="new-task-row1">
+                        <div class="form-group">
+                            <label for="caseMatter" class="test-light">Case/Matter</label>
+                            <input type="text" name="caseMatter" value="placeholder='Case/Matter'">
+                        </div>
+                        <div class="form-group">
+                            <label for="TaskName" class="test-light">Task Name</label>
+                            <input type="text" name="taskName" value="placeholder='Task Name'">
+                        </div>
+                        <div class="form-group">
+                            <label for="QuestionsComments" class="test-light">Questions/Comments</label>
+                            <input type="text" name="questionsComments" value="placeholder='Questions/Comments'">
+                        </div>
+                    </div>
+                    <div class="new-task-row2">
+                        <div class="form-group">
+                            <label for="Response" class="test-light">Response</label>
+                            <input type="text" name="questionsComments" value="placeholder='Questions/Comments'">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline">Deadline</label>
+                            <input type="date" id="deadline" name="Deadline">
+                        </div>
+                        <div class="buttonSection">
+                            <label for="Submit" name="submit">Section</label>
+                                <button type="submit" id="1">1</button>
+                                <button type="submit" id="2">2</button>
+                                <button type="submit" id="3">3</button>
+                                <button type="submit" id="4">4</button>
+                                <button type="submit" id="5">5</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <form action="/" method="POST">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Footer-->
+    </body>
+
+</html>
+<!--/Footer-->
