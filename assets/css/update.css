@@ -15,18 +15,17 @@ form {
 
 .form-row {
     color: blue;
-    display: flex;
-    flex-direction: row;
+  
+   
     justify-items: center;
     width: 100%;
 }
 
 
-/* .new-task-row2 {
+.new-task-row2 {
     color: blue;
-    display: flex;
-    flex-direction: row;
-    justify-items: center; */
+  
+    justify-items: center;
 }
 
 .form-group {
@@ -44,25 +43,26 @@ form {
 
 .form-control {
     background-color: lightgray;
-    margin: 10px;
+    border-color: darkgray;
 }
 
 #date {
-    width: 30%;
-    /* margin-right: 30px; */
+    width: 40%;
+    margin-right: 30px;
+    border-color: darkgray;
 }
 
 
 
 input {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: gray;
 }
 
 label {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px
 }
 
 button {
@@ -75,30 +75,6 @@ th {
 
 td {
 font-size: small;
-}
-
-#case {
-    width: 20%;
-}
-
-#task {
-    width: 80%;
-}
-
-#notes {
-    width: 60%;
-}
-
-.bi-x-lg {
-    color: red;
-}
-
-.bi-check-lg {
-    color: rgb(13, 185, 13);
-}
-
-.bi-pencil-fill {
-    color: blue;
 }
 
 
