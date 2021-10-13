@@ -1,9 +1,85 @@
-<!--include header->
-    <%- include("include/_header")%>
-<!--/include header-->
+<%- include("include/_header")%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ flipColors = query("#change"); 
+  var target = query(".demo");
+  target.classList.add("demo-on");
+  
+  
+  toggleClasses = function toggleClasses() {
+    target.classList.toggle("demo-on");
+    target.classList.toggle('demo-off');
+  };
+</script>
+
+<main id="site-main">
+    <div class="container">
+        <button class="box-nav-d-flex-justify-between">
+
+            <div id="star" class="bi bi-star-fill"> </div>
+            <button class="bi bi-star-fill"></button>
+<button type="button" id="star" class="bi bi-star-fill" value="Click Me" onclick="this.style.color = '#FFA500'"/></button>
+
+            <form method="POST" id="update_task" class="addTask">
+
+                <div class="form-row">
+                    <input type="text" class="form-control" id="case" placeholder="Case / Matter">
+                    <input type="text" class="form-control" id="task" placeholder="Task">
+                </div>
+                <div class="form-row" class="col-4">
+                    <input type="text" class="form-control" id="notes" placeholder="Notes">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" class="form-control" id="date" placeholder="Deadline">
+                </div>
+
+                <div class="form-row" class="col-4">
+                    <label for="Submit" name="submit">Section</label>
+                    <div class="form-control" id="buttonSection">
+                        <button type="submit" id="1">1</button>
+                        <button type="submit" id="2">2</button>
+                        <button type="submit" id="3">3</button>
+                        <button type="submit" id="4">4</button>
+                        <button type="submit" id="5">5</button>
+                    </div>
+                </div>
+            </form>
 
 
 
-<!--include footer->
+<div2 class="container1" id="section1">
+<form action="/" method="POST">
+    <table class="table table-sm">
+        <h2> 1. Section 1</h2>
+        <thead>
+            <tr>
+                <th style="width: 4%" scope="col">Today</th>
+                <th style="width: 4%" scope="col">Priority</th>
+                <th style="width: 10%" scope="col">Matter</th>
+                <th style="width: 35%" scope="col">Task</th>
+                <th style="width: 31%" scope="col">Notes</th>
+                <th style="width: 5%" scope="col">Deadline</th>
+                <th style="width: 2%" scope="col"></th>
+                <th style="width: 2%" scope="col"></th>
+                <th style="width: 2%" scope="col"></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <%- include("include/_show")%>
+        </tbody>
+    </table>
+</form>
+</div>
+            
+        </div>
+
+
+          
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+
+</script>
+
+
     <%- include("include/_footer")%>
-<!--/include footer-->

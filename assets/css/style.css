@@ -1,38 +1,75 @@
 
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #b1a296;;
+    border-width: 5px;
+}
+
+html {background-color: #b1a296;}
 
 main {
     display: flex;
     flex-direction: column;
     justify-items: center;
+    background-color: #8dadc4;
+    height: 98%;
+    width: 98%;
+    margin: auto;
+    border-color: #557a95; !important;
+    border-width: 10px;  !important;
+    padding: 10px; !important;
 }
-
+/* 
 form {
     display: flex;
     flex-direction: column;
     justify-items: center;
-}
-
+} */
 
 .form-row {
-    color: blue;
+    color: #557a95;
+    font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-items: center;
     width: 100%;
 }
 
+h2 {
+    font-size: 18px;
+    text-align: left;
+    background-color: rgb(16, 16, 87);
+    color:white;
+}
+
+div.container1 {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* #section1 {
+    border-color: black;
+    border-width: 5px;
+} */
+/* 
+.container{
+    border: black;
+    border-width: 5px;
+} */
 
 /* .new-task-row2 {
     color: blue;
     display: flex;
     flex-direction: row;
     justify-items: center; */
-}
 
-.form-group {
+
+/* .form-group {
     display: flex;
     margin: 10px;
-}
+} */
 
 #buttonSection {
     display: flex;
@@ -43,8 +80,9 @@ form {
 }
 
 .form-control {
-    background-color: lightgray;
+    background-color: #557a95;
     margin: 10px;
+    color: #7395ae;
 }
 
 #date {
@@ -52,12 +90,21 @@ form {
     /* margin-right: 30px; */
 }
 
+#notes {
+    color: #7395ae:
+}
 
-
-input {
+/* input {
     margin-left: 10px;
     margin-right: 10px;
-    background-color: gray;
+    background-color: #557a95;
+    color: #7395ae;
+} */
+
+#star{
+    color: lightgray;
+    background-color: transparent;
+    border: none;
 }
 
 label {
@@ -70,6 +117,7 @@ button {
    }
 
 th {
+    margin-top: 0;
     font-size: 15px;
 }
 
@@ -101,6 +149,24 @@ font-size: small;
     color: blue;
 }
 
-
+input::-webkit-input-placeholder {
+    color: #cbd3d8 !important;
+    font-weight: bolder;
+    }
+     
+    input:-moz-placeholder { /* Firefox 18- */
+    color: #7395ae !important;  
+    font-weight: bolder;
+    }
+     
+    input::-moz-placeholder {  /* Firefox 19+ */
+    color: #7395ae!important;  
+    font-weight: bolder;    
+}
+     
+    input:-ms-input-placeholder {  
+    color: #7395ae!important;
+    font-weight: bolder;  
+    }
 /* .form-group {
 margin-: 10px; */

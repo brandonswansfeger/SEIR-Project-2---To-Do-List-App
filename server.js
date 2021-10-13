@@ -4,6 +4,14 @@ const app=express();
 const dotenv=require('dotenv');
 const bodyparser=require('body-parser');
 const path=require("path");
+const jsdom = require('jsdom');
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
+const connectDB = require('./server/database/connection');
+
+
+
 
 dotenv.config({path: '.env'});
 const PORT=process.env.PORT||8080
@@ -11,13 +19,15 @@ const PORT=process.env.PORT||8080
 // log request
 app.use(morgan("tiny"));
 
+connectDB();
+
 //parse requests
 app.use(express.urlencoded({
     extended: true
 }));
 
 //set view engine
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
 
 
 //  load assets
@@ -25,9 +35,8 @@ app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
 app.use('/img', express.static(path.resolve(__dirname, "assets/css")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/css")))
 
-app.get('/',(req, res)=>{
-    res.render('index');
-})
+//load routers
+app.use('/', require('./server/routes/router'));
 
 
 app.listen(PORT, ()=> {console.log(`server is running on http://localhost:${PORT}`)});
