@@ -47,20 +47,3 @@ if (window.location.pathname == "/") {
 
 }
 
-
-//You can achieve this on any element using JS. Also, not only you can strike onClick but also remove the striked content back to its original state.
-
-$(function(){
-  var $curParent, Content;
-  $(document).delegate("span", function(){
-    if($(this).closest("s").length) {
-      Content = $(this).parent("s").html();
-      $curParent = $(this).closest("s");
-      $(Content).insertAfter($curParent);
-      $(this).closest("s").remove();
-    }
-    else {
-      $(this).wrapAll("<s />");
-    }
-  });
-});
