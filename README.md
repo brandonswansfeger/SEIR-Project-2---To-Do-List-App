@@ -19,10 +19,14 @@
 
 # Screenshots
 
+![alt text](https://github.com/brandonswansfeger/SEIR-Project-2---To-Do-List-App/blob/dev/Screen%20Shot_Main%20page.PNG "Main page screen shot")
+
+![alt text](https://github.com/brandonswansfeger/SEIR-Project-2---To-Do-List-App/blob/dev/screen%20shot_update%20page.PNG "Update page screen shot")
+
 
 # Geting Started
 
-
+(https://brandonswansfeger.github.io/Project-1/ "Link to Project")
 
 # Future Enhancements
 
