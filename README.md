@@ -1,4 +1,4 @@
-# Project-2 - To Do List App for Legal Proffesionals 
+# Project-2 - To Do List App for Legal Professionals 
 
 
 # Technologies Used
