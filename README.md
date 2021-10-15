@@ -24,7 +24,7 @@
 
 # Geting Started
 
-(https://brandonswansfeger.github.io/Project-1/ "Link to Project")
+(http://localhost:3000/ "Link to Project")
 
 # Future Enhancements
 
