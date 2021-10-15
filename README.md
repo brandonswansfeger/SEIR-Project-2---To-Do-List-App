@@ -1,8 +1,6 @@
 # Project-2 - To Do List App for Legal Proffesionals 
 
 
-    Souce data from Covid Act Now (CAN) at https://covidactnow.org
-
 # Technologies Used
 
 -HTML
