@@ -1,24 +1,14 @@
 const mongoose = require('mongoose');
 
 let schema = new mongoose.Schema({
-case:{
-    type: String,
-    required: false
-},
-task: {
-    type: String,
-required: true
-},
-Notes: {
-    type: String,
-    required: false
-},
-Deadline: {
-    type: String,
-}
 
-})
+    priority: String,
+    matter: String,
+    task: String,
+    notes: String,
+    deadline: String,
+});
 
-const Taskdb = mongoose.model('taskdb',schema);
+const Taskdb = mongoose.model('Taskdb',schema);
 
 module.exports=Taskdb;

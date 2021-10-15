@@ -9,8 +9,12 @@ const { JSDOM } = require( "jsdom" );
 const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
 const connectDB = require('./server/database/connection');
+const axios = require('axios');
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 
+const { document } = (new JSDOM('')).window;
+global.document = document;
 
 
 dotenv.config({path: '.env'});

@@ -1,48 +1,33 @@
-<tr>
-    <td>radio</td>
-    <td> <i id="star" class="bi bi-star-fill"></i><</td>
-    <td>Howell</td>
-    <td>File MTD and serve COS to clients</td>
-    <td>Sent drafts for review on 3/11</td>
-    <td>3/25/21</td>
-    <td>
-        <a href="/updatetask"><i class="bi bi-pencil-fill"></i></a>
+<!--Show-->
+
+<% for(var i=0;i<tasks.length;i++){%>
+
+<tr>   
+     <th style="width: 2%" id="Checkbox" class="align-middle" scope="row"><input type="checkbox"></th>
+     <td style="background-color: #F6f6f2; font-weight: 900" id="priority"style="width: 8%"> <%= tasks[i].priority %></td>
+     <td style="width: 15%" class="font=weight-bold"><span><%= tasks[i].matter %></span></td>
+     <td style="font-weight: 900""width: 35%"><span><%= tasks[i].task %></span></td>
+     <td style="width: 25%"><%= tasks[i].notes %></td> 
+    <td style="font-weight: 900" style="width: 10%"><%= tasks[i].deadline %></td>
+    <td style="width: 2%; justify-items: end">
+        <a id="updateTask" href="/updateTask/?id=<%= tasks[i]._id%>"><i class="bi bi-pencil-fill"></i></a>
     </td>
-    <td><i class="bi bi-x-lg"></i></td>
-    <td><i class="bi bi-check-lg"></i></td>
-</tr>
+   </tr>
+<%}%>
 
-<table class="table table-sm">
-    <h2> 2. Section 2</h2>
-    <thead>
-        <tr>
-            <th style="width: 4%" scope="col">Today</th>
-            <th style="width: 4%" scope="col">Priority</th>
-            <th style="width: 10%" scope="col">Matter</th>
-            <th style="width: 35%" scope="col">Task</th>
-            <th style="width: 31%" scope="col">Notes</th>
-            <th style="width: 5%" scope="col">Deadline</th>
-            <th style="width: 1%" scope="col"></th>
-            <th style="width: 1%" scope="col"></th>
-            <th style="width: 1%" scope="col"></th>
-        </tr>
-    </thead>
-    <tbody>
 
-    <tr>
-        <td><button type="button" id="star" class="bi bi-star-fill" value="Click Me" onclick="this.style.color = '#FFA500'; this.style.border = 'solid'"/></button>></td>
-        <td>radio</td>
-        <td>Howell</td>
-        <td>File MTD and serve COS to clients</td>
-        <td>Sent drafts for review on 3/11</td>
-        <td>3/25/21</td>
-        <td>
-            <a href="/updatetask"><i class="bi bi-pencil-fill"></i></a>
-        </td>
-        <td><i class="bi bi-x-lg"></i></td>
-        <td><i class="bi bi-check-lg"></i></td>
-    </tr>
 
 
     </tbody>
-    
+<!--/Show-->
+<script>
+
+
+document.getElementById('#checkbox').addEventListener('click', function (evt) {
+  var element = evt.target;
+
+  if (element.type !== 'checkbox') { return; }
+  element.parentElement.classList.toggle('strikeOut');
+});
+</script>
+
