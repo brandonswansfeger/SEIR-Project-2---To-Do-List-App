@@ -42,5 +42,8 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //load routers
 app.use('/', require('./server/routes/router'));
 
+let port = process.env.port;
+if(port==null||port==""){
+    port=5000;
 
 app.listen(PORT, ()=> {console.log(`server is running on http://localhost:${PORT}`)});
