@@ -4,15 +4,27 @@
 
 <tr>   
      <th style="width: 2%" id="Checkbox" class="align-middle" scope="row"><input type="checkbox"></th>
-     <td style="background-color: #F6f6f2; font-weight: 900" id="priority"style="width: 8%"> <%= tasks[i].priority %></td>
-     <td style="width: 15%" class="font=weight-bold"><span><%= tasks[i].matter %></span></td>
-     <td style="font-weight: 900""width: 35%"><span><%= tasks[i].task %></span></td>
+     <td style="font-weight: 900" class="priority"style="width: 8%"> <%= tasks[i].priority %></td>
+     <td style="width: 15%" class="font=weight-bold"><%= tasks[i].matter %></td>
+     <td id='t2'style="font-weight: 900""width: 35%"><%= tasks[i].task %></td>
      <td style="width: 25%"><%= tasks[i].notes %></td> 
-    <td style="font-weight: 900" style="width: 10%"><%= tasks[i].deadline %></td>
+    <td id='t3'style="font-weight: 900" style="width: 10%"><%= tasks[i].deadline %></td>
     <td style="width: 2%; justify-items: end">
         <a id="updateTask" href="/updateTask/?id=<%= tasks[i]._id%>"><i class="bi bi-pencil-fill"></i></a>
     </td>
-   </tr>
+    <td style="width: 2%; justify-items: end">
+      <a id="updateTask" href="/updateTask/?id=<%= tasks[i]._id%>"><i class="bi bi-x-fill"></i></a>
+  </td>
+    <td style="width: 2%; justify-items: end">
+      <button type="submit" id="buttondelete"></button>
+    </td>
+  </td>
+   
+
+
+  </tr>
 <%}%>
  
 <!--/Show-->
+
+

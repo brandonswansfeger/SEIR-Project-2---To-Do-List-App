@@ -1,51 +1,110 @@
 nav {
-    background-color: #388087;
+    background-color: #0f2729;
     justify-content: center;
     align-self: center;
+    font-size: 18px;
 }
 
 thead {
-background-color: #6fb3b8;
+background-color: transparent;
 
+}
+
+.form-control{
+    background-color: #0f2729;
 }
 
 html{
-
+color: #0f2729;
 }
 
 main{
-    margin: 20px;
+    margin-left: 0;
+    margin-right: 2%; 
 }
 
+select:not {
+    background-color:  #6fb3b8!important;
+    color:#388087;
+ }
+ 
+option {
+    color:#062b2e;
+}
+
+ 
+ select{
+    background-color:  #09555c !important;
+    color: #6fb3b8;
+ }
+
+}
+
+
+input:not(:placeholder-shown) {
+    background-color:  #6fb3b8!important;
+ }
+ 
+ 
+ input:placeholder-shown {
+    background-color:  #0f2729 !important;
+ }
+
 body {
-    background-color: #badfe7;
-    display: ;
+    background-color: #0f2729;
+    font-family: Lato;
+}
+
+table {
+    margin-right: auto;
+    color: #388087 !important;
+    
 }
 
 input {
-    background-color: #f6f6f2;
+    background-color: #0f2729;
     margin: 2px;
+    color:#388087;
 }
 
 .form-row {
     display: flex;
+    color:#6fb3b8;
+    font-size: auto;
 }
 
 p {
-    font-size: 12px;
+    font-size: small;
+    color: 50%;
     margin-left: 2px;
     margin-right: 2px
+}
+
+#t2 {
+   /* background-color: #c2edce; */
+   /* color: #6fb3b8; */
 }
 
 .row-3 {
     display: flex;
 }
 
+tr {
+    border-bottom: solid #388087 .4px;
+}
+
 table {
 width: auto;
 margin: 10px;
 justify-self: center;
+border-color: transparent;
+color:#388087;
 
+}
+
+t3 {
+    /* font-size:  */
+    color: #6fb3b8;
 }
 
 #notes{
@@ -55,6 +114,8 @@ width: 60%;
 
 #date {
     width: 30%;
+    background-color: #0f2729 !important;
+    color:#388087;
 }
 
 #addtaskbtn {
@@ -66,6 +127,16 @@ color: #388087;
 margin-left: 15%;
 
 
+}
+
+td {
+    font-size: auto;
+    /* color:#6fb3b8; */
+    
+}
+
+th {
+    font-size: auto;
 }
 /* #row-3 {
     display: flex;
