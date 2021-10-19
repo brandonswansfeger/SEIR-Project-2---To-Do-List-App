@@ -26,3 +26,14 @@ exports.updateTask = (req,res) => {
     })
 }
 
+
+exports.deleteTask = (req,res) => {
+    axios.delete('http://localhost:3000/api/tasks',{params:{id:req.query.id}})
+    .then(function(taskdata){
+        res.render('updateTask',{task:taskdata.data});
+
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}

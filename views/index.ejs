@@ -1,91 +1,77 @@
 <%- include("include/_header")%>
 <nav>
-    <h1 style="align-self: center; color: #f6f6f2; text-justify: center"
-        >To Do List</h1>
-    </nav>
- <Main id=" site-main">
+    <h1 style="align-self: center; color: #f6f6f2; text-justify: center">To Do List</h1>
+</nav>
+<Main id=" site-main">
 
-        <div class="container">
-            <div>
-            <form action="api/tasks" method="POST" id="add_task" class="addTask"
+    <div class="container">
+             <form action="api/tasks" method="POST" id="add_task" class="addTask"
                 onsubmit="setTimeout(function(){window.location.reload();},10);">
-               <div class="form-row">
-                    <input type="text" name="case" value="" class="form-control form-control-sm" id="case"
+                <div class="form-row">
+                    <input type="text" name="case" value="" style="background-color: #ffffff;" class="form-control form-control-sm" id="case"
                         placeholder="Case / Matter">
                     <input type="text" name="task" value="" class="form-control form-control-sm" id="task"
                         placeholder="Task">
-                               </div>
-                               <div class="form-row">
+                </div>
+                <div class="form-row">
                     <input type="text" name="notes" value="" class="form-control form-control-sm" id="notes"
                         placeholder="Notes">
                     <p>Deadline</p>
-                    <input type="date" id="date" name="deadline" value="" class="form-control form-control-sm" id="date"
-                        placeholder="Deadline">
+                    <input type="date" id="date" name="deadline" value="" class="form-control form-control-sm"
+                        id="date" placeholder="Deadline">
                     <p>Priority</p>
                     <select style="width: 200px" class="form-control form-control-sm" placeholder="Priority"
                         name="priority" value="">
                         <option></option>
-                        <option>High</option>
-                        <option>Medium</option>
-                        <option>Low</option>
+                        <option>HIGH</option>
+                        <option>medium</option>
                     </select>
                 </div>
+                <div class="form-row" id="row3">
+                    <button style="width: 700px" style="align-items: center" ; center" id="addtaskbtn"
+                        onsubmit="setTimeout(function(){window.location.reload();},5);">Add Task</button>
                 </div>
-                <div  class="form-row" id="row3">
-                    <button style="width: 700px" style="align-items: center"; center" id="addtaskbtn"
-                        onsubmit="setTimeout(function(){window.location.reload();},10);">Add Task</button>
-                </div>
-        </div>
             </form>
-
         
-            
+       
+        <form action="" method="POST">
+            <table class="table table-sm" id="table">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 5%"></th>
+                        <th style="width: 8%" scope="col">Priority</th>
+                        <th style="width: 15%" scope="col">Matter</th>
+                        <th style="width: 35%" scope="col">Task</th>
+                        <th style="width: 25%" scope="col">Notes</th>
+                        <th style="width: 10%" scope="col">Deadline</th>
+                        <th style="width: 2%" scope="col"></th>
+                        <th style="width: 2%" scope="col"></th>
+                        <th style="width: 2%" scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include("include/_show")%>
 
 
+                </tbody>
 
-            <form action="" method="POST">
-                <table class="table table-sm" id="table">
-                    <thead>
-                        <tr>
-                            <th scope="col" style="width: 5%"></th>
-                            <th style="width: 8%" scope="col">Priority</th>
-                            <th style="width: 15%" scope="col">Matter</th>
-                            <th style="width: 35%" scope="col">Task</th>
-                            <th style="width: 25%" scope="col">Notes</th>
-                            <th style="width: 10%" scope="col">Deadline</th>
-                            <th style="width: 2%" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%- include("include/_show")%>
+            </table>
+        </form>
+    </div>
+</Main>
+< </main> 
 
+<script>
+const deleteBtn = document.querySelector('button');
+deleteBtn.addEventListener('click', handleDelete);
 
-                    </tbody>
-
-                </table>
-            </form>
-        </div>
-    </Main>
-        <
+function handleDelete() {
+    const id = deleteBtn.dataset.id;
+    fetch('api/tasks/' + id, {
+        method: 'DELETE'
+    }).then(() => window.location.href = "/");
+}});
+</script>
 
 
-        </main>
-        <script>
-            document.getElementById('#checkbox').addEventListener('click', function (evt) {
-                var element = evt.target;
-
-                if (element.type !== 'checkbox') {
-                    return;
-                }
-                element.parentElement.classList.toggle('strikeOut');
-            });
-
-            document.getElementById('cmdNewTask').addEventListener('click', addTask);
-
-            document.getElementById('form').addEventListener('submit', function (evt) {
-                evt.preventDefault();
-            });
-        </script>
-
-
-        <%- include("include/_footer")%>
+<%- include("include/_footer")%>

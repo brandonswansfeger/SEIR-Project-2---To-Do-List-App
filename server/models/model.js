@@ -9,6 +9,6 @@ let schema = new mongoose.Schema({
     deadline: String,
 });
 
-const Taskdb = mongoose.model('Taskdb',schema);
+const Taskdb = mongoose.model('Taskdb', schema);
 
-module.exports=Taskdb;
+module.exports = Taskdb;
