@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+MONGO_URL=mongodb+srv://USERNAME:PASSWORD@gabootcamp.z41ps.mongodb.net/Tasks?retryWrites=true&w=majority
 const connectDB = async() => {
 try{
 
