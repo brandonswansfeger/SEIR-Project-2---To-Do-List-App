@@ -1,7 +1,5 @@
-# Project-2 - To Do List App for Legal Proffesionals 
+# Project-2 - To Do List App for Legal Professionals 
 
-
-    Souce data from Covid Act Now (CAN) at https://covidactnow.org
 
 # Technologies Used
 
@@ -19,10 +17,14 @@
 
 # Screenshots
 
+![alt text](https://github.com/brandonswansfeger/SEIR-Project-2---To-Do-List-App/blob/dev/Screen%20Shot_Main%20page.PNG "Main page screen shot")
+
+![alt text](https://github.com/brandonswansfeger/SEIR-Project-2---To-Do-List-App/blob/dev/screen%20shot_update%20page.PNG "Update page screen shot")
+
 
 # Geting Started
 
-
+(http://localhost:3000/ "Link to Project")
 
 # Future Enhancements
 
